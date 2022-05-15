@@ -36,10 +36,11 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 body{
-    background-color: aqua;
     width: 100%;
+    overflow: hidden;
 }
 .wrapper{
+    margin-top: 5rem !important;
     max-width: 63rem;
     margin: 0 auto;
 }
@@ -48,19 +49,26 @@ body{
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    height: 76vh;
+    height: 50rem;
     overflow: hidden;
-    border: solid 5px red;
-    width: 32rem;
+    width: 50%;
     margin: 0 auto;
+    box-shadow:  -5px 10px 61px #e5dade;
+    padding: 0 1rem;
 }
 
 .slider-child{
     display: flex;
     scroll-behavior: smooth;
     width: 400%;
-    height: 68vh;
+    height: 43rem;
     overflow: hidden;
+}
+
+.overflown{
+    transition: all 1s ease-in-out;
+    padding-bottom: 1rem;
+
 }
 
 input[name='btn-check']{
@@ -71,18 +79,12 @@ input[name='btn-check']{
 
 .slider-content img{
     object-fit: cover;
-    max-width: 98%;
-    height: 100%;
-  
+    
 }
 
 .slider-content{
-    transition: all 1s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-self: center;
-    width: 100%;
-    height: 100%;
 }
 
 .navigation-slider{
@@ -91,25 +93,49 @@ input[name='btn-check']{
     justify-content: flex-end;
 }
 
+
+
+.text-for-meme {
+    width: 400%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.text-for-meme{
+    display: inline-block;
+    width: 100%;
+    font-family: arial;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+
 .label-nav{
     border-radius: 50%;
     height: 1rem;
     width: 1rem;
-    background-color: brown;
+    background-color: #e8c4c4;
     margin: 0.2rem;
     cursor: pointer;
+}
+
+.textAndNavigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400%;
 }
 
 #btn1:checked ~ .s1{
     margin-left: 0;
 }
 #btn2:checked ~ .s1{
-    margin-left: -25%;
+    margin-left: -26%;
 }
 #btn3:checked ~ .s1{
-    margin-left: -50%;
+    margin-left: -52%;
 }
 #btn4:checked ~ .s1{
-    margin-left: -75%;
+    margin-left: -78%;
 }
-
