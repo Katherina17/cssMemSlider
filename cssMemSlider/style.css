@@ -67,7 +67,7 @@ body{
 
 .overflown{
     transition: all 1s ease-in-out;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -91,51 +91,66 @@ input[name='btn-check']{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-}
-
-
-
-.text-for-meme {
-    width: 400%;
-    display: inline-flex;
-    justify-content: space-between;
+    z-index: 9;
 }
 
 .text-for-meme{
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    width: 400%;
     font-family: arial;
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
+    margin-top: -22px;
 }
-
 
 .label-nav{
     border-radius: 50%;
     height: 1rem;
     width: 1rem;
     background-color: #e8c4c4;
-    margin: 0.2rem;
     cursor: pointer;
 }
 
-.textAndNavigation{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 400%;
+.label-nav:hover{
+    background-color: #c07d7d;
 }
 
-#btn1:checked ~ .s1{
+label{
+    padding: 0.5em;
+}
+
+label:hover .label-nav {
+    background-color: #c07d7d;
+
+}
+
+label:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.child-meme{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn1:checked ~ .s1, .s2{
     margin-left: 0;
 }
-#btn2:checked ~ .s1{
-    margin-left: -26%;
+
+#btn2:checked  .s2{
+    margin-left: -120%;
 }
+
+#btn2:checked ~ .s1{
+    margin-left: -26.8%;
+}
+
 #btn3:checked ~ .s1{
-    margin-left: -52%;
+    margin-left: -53%;
 }
 #btn4:checked ~ .s1{
-    margin-left: -78%;
+    margin-left: -79.8%;
 }
