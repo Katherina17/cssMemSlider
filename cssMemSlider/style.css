@@ -1,0 +1,308 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+    font-size: 100%;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+body{
+    width: 100%;
+    overflow: hidden;
+}
+.wrapper{
+    margin-top: 5rem !important;
+    max-width: 63rem;
+    margin: 0 auto;
+}
+
+.slider-container{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow:  -0.2rem 1rem 5rem #e5dade;
+    padding: 0 1rem;
+}
+
+.slider-child{
+    display: flex;
+    scroll-behavior: smooth;
+    width: 400%;
+    height: 43rem;
+    overflow: hidden;
+}
+
+.overflown{
+    transition: all 1s ease-in-out;
+    margin-bottom: 1rem;
+
+}
+
+input[name='btn-check']{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.slider-content img{
+    object-fit: cover;
+    
+}
+
+.slider-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 9;
+}
+
+.text-for-meme{
+    display: flex;
+    width: 400%;
+    font-family: arial;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin-bottom: -1.6rem;
+    margin-top: 0;
+    animation: ease-in-out 2s;
+
+}
+
+.label-nav{
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    background-color: #e8c4c4;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.label-nav:hover{
+    background-color: #c07d7d;
+}
+
+.label-nav:active{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+label{
+    padding: 0.5em;
+}
+
+label:hover .label-nav {
+    background-color: #c07d7d;
+    transition: all 0.4s ease-in-out;
+}
+
+label:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.child-meme{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-nav:active{
+    transition:  all 2s ease-in-out;
+}
+
+.child-meme p{
+    transition: all 1s ease-in-out;
+}
+
+#btn1:checked ~ .slider-child > .slidable{
+    margin-left: 0;
+}
+
+#btn1:checked ~ .text-for-meme > .slidable > .s2{
+    margin-left: 0%;
+}
+
+#btn1:checked ~ .navigation-slider > #label1 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn1:checked ~ .navigation-slider > #label1 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
+}
+
+#btn2:checked ~ .text-for-meme > .slidable > .s2{
+    margin-left: -38%;
+}
+
+#btn2:checked ~ .slider-child > .slidable{
+    margin-left: -26.8%;
+}
+
+#btn2:checked ~ .navigation-slider > #label2 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn2:checked ~ .navigation-slider > #label2 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
+}
+
+#btn3:checked ~ .slider-child > .slidable{
+    margin-left: -53%;
+}
+
+#btn3:checked ~ .text-for-meme > .slidable > .s2{
+    margin-left: -107%;
+}
+
+#btn3:checked ~ .navigation-slider > #label3 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn3:checked ~ .navigation-slider > #label3 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
+}
+
+#btn4:checked ~ .slider-child > .slidable{
+    margin-left: -79.8%;
+}
+
+#btn4:checked ~ .text-for-meme > .slidable > .s2 {
+    margin-left: -298%;
+}
+
+#btn4:checked ~ .navigation-slider > #label4 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn4:checked ~ .navigation-slider > #label4 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
+}
+.mobileVersion{
+    height: 0;
+    width: 0;
+}
+@media(max-width: 1030px){
+    .slider-container{
+        width: 70%;
+    }
+
+    .wrapper{
+        max-width: 45rem;
+    }
+}
+
+@media(max-width: 768px){
+    .slider-container{
+        width: 85%;
+    }
+
+    .wrapper{
+        max-width: 37rem;
+    }
+
+    .navigation-slider{
+        justify-content: center;
+    }
+
+    .text-for-meme{
+        margin-top: 2rem;
+        margin-bottom: -4.6rem;
+    }
+}
+
+@media(max-width: 613px){
+    .slider-container{
+        width: 105%;
+    }
+
+    .wrapper{
+        max-width: 30rem;
+    }
+}
+
+@media(max-width: 554px){
+    .slider-container{
+        width: 55%;
+        height: 27rem;
+    }
+
+    .wrapper{
+        max-width: 30rem;
+    }
+
+    .mobileVersion{
+        height: 100%;
+        width: 100%;
+    }
+
+    .dekstopVersion{
+        width: 0;
+        height: 0;
+    }
+
+    .slider-child{
+        height: 21rem;
+    }
+
+    .text-for-meme{
+        font-size: 1rem;
+    }
+
+    .slidable{
+        margin-right: 1rem;
+    }
+
+    #btn3:checked ~ .slider-child > .slidable{
+        margin-left: -51%;
+    }
+
+    #btn4:checked ~ .slider-child > .slidable{
+        margin-left: -78%;
+    }
+    
+
+
+}
