@@ -53,7 +53,7 @@ body{
     overflow: hidden;
     width: 50%;
     margin: 0 auto;
-    box-shadow:  -5px 10px 61px #e5dade;
+    box-shadow:  -0.2rem 1rem 5rem #e5dade;
     padding: 0 1rem;
 }
 
@@ -219,4 +219,90 @@ label:hover{
 
 #btn4:checked ~ .navigation-slider > #label4 > .label-nav:hover{
     border:  0.2rem solid #c07d7d;
+}
+.mobileVersion{
+    height: 0;
+    width: 0;
+}
+@media(max-width: 1030px){
+    .slider-container{
+        width: 70%;
+    }
+
+    .wrapper{
+        max-width: 45rem;
+    }
+}
+
+@media(max-width: 768px){
+    .slider-container{
+        width: 85%;
+    }
+
+    .wrapper{
+        max-width: 37rem;
+    }
+
+    .navigation-slider{
+        justify-content: center;
+    }
+
+    .text-for-meme{
+        margin-top: 2rem;
+        margin-bottom: -4.6rem;
+    }
+}
+
+@media(max-width: 613px){
+    .slider-container{
+        width: 105%;
+    }
+
+    .wrapper{
+        max-width: 30rem;
+    }
+}
+
+@media(max-width: 554px){
+    .slider-container{
+        width: 55%;
+        height: 27rem;
+    }
+
+    .wrapper{
+        max-width: 30rem;
+    }
+
+    .mobileVersion{
+        height: 100%;
+        width: 100%;
+    }
+
+    .dekstopVersion{
+        width: 0;
+        height: 0;
+    }
+
+    .slider-child{
+        height: 21rem;
+    }
+
+    .text-for-meme{
+        font-size: 1rem;
+    }
+
+    .slidable{
+        margin-right: 1rem;
+    }
+
+    #btn3:checked ~ .slider-child > .slidable{
+        margin-left: -51%;
+    }
+
+    #btn4:checked ~ .slider-child > .slidable{
+        margin-left: -78%;
+    }
+    
+
+
 }
