@@ -63,6 +63,7 @@ body{
     width: 400%;
     height: 43rem;
     overflow: hidden;
+    margin-bottom: 0.5rem;
 }
 
 .overflown{
