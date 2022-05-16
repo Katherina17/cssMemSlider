@@ -103,6 +103,8 @@ input[name='btn-check']{
     letter-spacing: 0.1rem;
     margin-bottom: -1.6rem;
     margin-top: 0;
+    animation: ease-in-out 2s;
+
 }
 
 .label-nav{
@@ -119,8 +121,8 @@ input[name='btn-check']{
 }
 
 .label-nav:active{
-    background-color: #c07d7d;
-
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
 }
 
 label{
@@ -143,12 +145,29 @@ label:hover{
     justify-content: space-between;
 }
 
+.label-nav:active{
+    transition:  all 2s ease-in-out;
+}
+
+.child-meme p{
+    transition: all 1s ease-in-out;
+}
+
 #btn1:checked ~ .slider-child > .slidable{
     margin-left: 0;
 }
 
 #btn1:checked ~ .text-for-meme > .slidable > .s2{
     margin-left: 0%;
+}
+
+#btn1:checked ~ .navigation-slider > #label1 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn1:checked ~ .navigation-slider > #label1 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
 }
 
 #btn2:checked ~ .text-for-meme > .slidable > .s2{
@@ -159,6 +178,15 @@ label:hover{
     margin-left: -26.8%;
 }
 
+#btn2:checked ~ .navigation-slider > #label2 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn2:checked ~ .navigation-slider > #label2 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
+}
+
 #btn3:checked ~ .slider-child > .slidable{
     margin-left: -53%;
 }
@@ -167,10 +195,28 @@ label:hover{
     margin-left: -107%;
 }
 
+#btn3:checked ~ .navigation-slider > #label3 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn3:checked ~ .navigation-slider > #label3 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
+}
+
 #btn4:checked ~ .slider-child > .slidable{
     margin-left: -79.8%;
 }
 
 #btn4:checked ~ .text-for-meme > .slidable > .s2 {
     margin-left: -298%;
+}
+
+#btn4:checked ~ .navigation-slider > #label4 > .label-nav{
+    background-color: transparent;
+    border:  0.2rem solid #ef958ea6;
+}
+
+#btn4:checked ~ .navigation-slider > #label4 > .label-nav:hover{
+    border:  0.2rem solid #c07d7d;
 }
